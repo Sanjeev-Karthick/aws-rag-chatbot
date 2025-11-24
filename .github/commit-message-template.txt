@@ -1,0 +1,8 @@
+Short summary (use one of: feat|fix|chore|docs|refactor|test|perf|style): Brief description
+
+Longer description (optional). Explain why the change was made and any important details.
+
+Examples:
+- feat: add local .env loading for backend
+- fix: handle missing citations in query response
+- docs: add CHANGELOG and demo history README
