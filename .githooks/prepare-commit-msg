@@ -1,0 +1,13 @@
+#!/bin/sh
+# Simple prepare-commit-msg hook that opens the commit template when the message is empty
+# To install: ln -s ../../.githooks/prepare-commit-msg .git/hooks/prepare-commit-msg && chmod +x .git/hooks/prepare-commit-msg
+
+HOOK_FILE="$1"
+COMMIT_SOURCE="$2"
+
+# If the commit has no message yet and it's not a merge, append the template
+if [ -f "$HOOK_FILE" ] && [ -z "$(cat $HOOK_FILE | tr -d '[:space:]')" ] && [ "$COMMIT_SOURCE" != "merge" ]; then
+  echo "$(cat .github/commit-message-template.txt)" > "$HOOK_FILE"
+fi
+
+exit 0
