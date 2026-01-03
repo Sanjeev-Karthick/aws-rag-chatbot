@@ -1,11 +1,11 @@
-# a Scalable RAG solution using Knowledge Bases for Amazon Bedrock
+# A Scalable RAG solution using Amazon Web Services (AWS)
 
 ## Solution Architecture Diagrams
 
 Chatbot
 ![](./images/Bedrock-Rag-App-Architecture.jpg)
 
-Add new websites for web datasource
+Adding new websites for datasource
 ![](./images/Update_SeedURLs_Bedrock.jpg)
 
 
@@ -38,7 +38,7 @@ When the deployment completes,
 
 ### Upload content to S3 bucket
 
-Get a recent publicly available Amazon's annual report and copy it to the S3 bucket name noted previously. For a quick test, you can copy the [Amazon's 2022 annual report](https://s2.q4cdn.com/299287126/files/doc_financials/2023/ar/Amazon-2022-Annual-Report.pdf) using the [AWS S3 Console](https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html). The content from the S3 bucket will be automatically synchronized with the knowledgebase because the solution deployment watches for new content in the S3 bucket and triggers an ingestion workflow.
+Upload PDF files using the [AWS S3 Console](https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html). The content from the S3 bucket will be automatically synchronized with the knowledgebase because the solution deployment watches for new content in the S3 bucket and triggers an ingestion workflow.
 
 ### Synchronize web content
 
@@ -67,4 +67,5 @@ Use "cdk destroy" to delete the stack of cloud resources created in this solutio
 - S3 bucket created in this project is setup to enforce ssl requests only and encrypt data at rest.
 - S3 bucket is setup to block public access.
 - API Gateway is setup with AWS Web Application Firewall to allow requests from a specific IP address only.
+
 
