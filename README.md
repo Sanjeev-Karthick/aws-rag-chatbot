@@ -1,8 +1,8 @@
-# Implement a scalable RAG solution using Knowledge Bases for Amazon Bedrock
+# a Scalable RAG solution using Knowledge Bases for Amazon Bedrock
 
 ## Solution Architecture Diagrams
 
-Q&A Chatbot
+Chatbot
 ![](./images/Bedrock-Rag-App-Architecture.jpg)
 
 Add new websites for web datasource
@@ -53,7 +53,7 @@ The deployed solution initializes the web data source called "WebCrawlerDataSour
 - For Step 1, enter the API Gateway endpoint URL noted previously.
 - For Step 2, select the model you want to use for RAG. The default model is **Anthropic Claude Instant**.
 - For Step 3, you can enter a question of the form "Which cities have offices?" and press the enter key to see the generated answer including a citation.
-  ![](./images/q-a-history.JPG)
+
 
 ## Cleanup
 
@@ -67,3 +67,4 @@ Use "cdk destroy" to delete the stack of cloud resources created in this solutio
 - S3 bucket created in this project is setup to enforce ssl requests only and encrypt data at rest.
 - S3 bucket is setup to block public access.
 - API Gateway is setup with AWS Web Application Firewall to allow requests from a specific IP address only.
+
